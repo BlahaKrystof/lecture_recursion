@@ -2,13 +2,13 @@ import matplotlib.pyplot as plt
 
 def flood_fill(img, x, y):
     if x in range(len(img[0])) and y in range(len(img)):
-        if  img[x][y] == 1.:
-            img[x][y] = 2.
+        if  img[y][x] == 1.:
+            img[y][x] = 2.
             flood_fill(img, x +1, y)
             flood_fill(img, x, y +1)
             flood_fill(img, x + 1, y + 1)
-        elif img[x][y] == 0.:
-            img[x][y] = 0.
+        elif img[y][x] == 0.:
+            img[y][x] = 0.
 
 
 
